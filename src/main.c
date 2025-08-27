@@ -200,8 +200,8 @@ int main(void)
 {
     printf("Singly Linked List Test Runner\n");
 
-    test_empty_ops();
     test_push_head_tail();
+    test_empty_ops();
     test_del_head_tail();
     test_delete_specific_node();
     test_concat();
