@@ -32,16 +32,17 @@ static void free_list(struct ListNode *head)
 
 /* ---------- individual scenario tests ---------- */
 
-static void test_create_node(void) {
+static void test_create_node(void)
+{
     printf("Running test_create_node...\n");
 
     // Create a node with value 42
     struct ListNode *n = create_node(42);
 
     // Assertions
-    assert(n != NULL);            // Node should be allocated
-    assert(n->val == 42);         // Value should match
-    assert(n->next == NULL);      // Next should be initialized to NULL
+    assert(n != NULL);        // Node should be allocated
+    assert(n->val == 42);     // Value should match
+    assert(n->next == NULL);  // Next should be initialized to NULL
 
     printf("test_create_node passed!\n");
 }
