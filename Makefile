@@ -11,8 +11,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-obj/%.o: src/%.c
-	@mkdir -p obj
+obj/%.o: src/%.c | obj
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -21,6 +20,9 @@ clean:
 
 run: $(TARGET)
 	./$(TARGET)
+
+obj:
+    mkdir obj
 
 indent: 
 	clang-format -i src/* includes/*
